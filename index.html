@@ -2,21 +2,29 @@
 <html>
 <head>
 <style>
-  body { margin: 0; overflow: hidden; background: transparent; font-family: sans-serif; }
+  body { 
+    margin: 0; 
+    overflow: hidden; 
+    background: transparent; 
+    font-family: sans-serif; 
+  }
   .ticker-wrap {
     width: 100%;
     overflow: hidden;
-    background-color: #1a73e8; /* Warna latar belakang */
-    color: white;              /* Warna teks */
+    /* Gradien biru dengan transparansi 80% (alpha = 0.8) */
+    background: linear-gradient(90deg, rgba(26, 115, 232, 0.8) 0%, rgba(13, 71, 161, 0.8) 50%, rgba(0, 150, 199, 0.8) 100%);
+    color: white;
     padding: 8px 0;
+    border-radius: 6px; /* Membuat sudut sedikit melengkung agar rapi */
   }
   .ticker {
     display: inline-block;
     white-space: nowrap;
     padding-left: 100%;
-    animation: marquee 18s linear infinite; /* Atur kecepatan (18s) di sini */
+    animation: marquee 18s linear infinite;
     font-size: 14px;
     font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Bayangan tipis agar teks tetap jelas dibaca */
   }
   @keyframes marquee {
     0%   { transform: translate(0, 0); }
